@@ -7,6 +7,7 @@ This is the companion repository for the paper "Scientific reproducibility in th
 Based on [Edward Ma's DS project template](https://github.com/makcedward/ds_project_template)
 
 Here is the explantation of folder strucure:
+```bash
   .  
   ├── data                              # All source data  
   │   ├── processed                     # Any data resulting from processing, automatic or manual  
@@ -14,7 +15,7 @@ Here is the explantation of folder strucure:
   │   │   └── vosviewer                 # processed data created with VOSviewer  
   │   └── raw                           # All untouched data  
   │       ├── s2_2021_06_01             # Semantic Scholar data  
-  │       └── webofscience_2021_06_21   # Web of Science data  
+  │       └── web_of_science_2021_06_21 # Web of Science data  
   ├── docs                              # Documentation / Drafts  
   ├── notebook                          # Jupyter / R Notebooks  
   │   └── eda                           # Exploratory data analysis  
@@ -22,4 +23,4 @@ Here is the explantation of folder strucure:
   │   ├── preparation                   # Source code for data processing  
   │   └── processing                    # Source code for data preparation  
   └── test                              # All software testing goes here  
-
+```
