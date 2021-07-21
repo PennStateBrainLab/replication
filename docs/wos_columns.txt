@@ -1,0 +1,68 @@
+COLUMN_NAME, DESCRIPTION, DATA_TYPE
+PT, Publication Type (J=Journal; B=Book; S=Series; P=Patent), TEXT
+AU, Authors, TEXT
+BA, Book Authors, TEXT
+BE, Editors, TEXT
+GP, Book Group Authors, TEXT
+AF, Author Full Name, TEXT
+BF, Book Authors Full Name, TEXT
+CA, Group Authors, TEXT
+TI, Document Title, TEXT
+SO, Publication Name, TEXT
+SE, Book Series Title, TEXT
+BS, Book Series Subtitle, TEXT
+LA, Language, TEXT
+DT, Document Type, TEXT
+CT, Conference Title, TEXT
+CY, Conference Date, TEXT
+CL, Conference Location, TEXT
+SP, Conference Sponsors, TEXT
+HO, Conference Host, TEXT
+DE, Author Keywords, TEXT
+ID, Keywords Plus, TEXT
+AB, Abstract, TEXT
+C1, Author Address, TEXT
+RP, Reprint Address, TEXT
+EM, E-mail Address, TEXT
+RI, ResearcherID Number, TEXT
+OI, ORCID Identifier (Open Researcher and Contributor ID), TEXT
+FU, Funding Agency and Grant Number, TEXT
+FX, Funding Text, TEXT
+CR, Cited References, TEXT
+NR, Cited Reference Count, INTEGER
+TC, Web of Science Core Collection Times Cited Count, INTEGER
+Z9, Total Times Cited Count, INTEGER
+U1, Usage Count (Last 180 Days), INTEGER
+U2, Usage Count (Since 2013), INTEGER
+PU, Publisher, TEXT
+PI, Publisher City, TEXT
+PA, Publisher Address, TEXT
+SN, International Standard Serial Number (ISSN), TEXT
+EI, Electronic International Standard Serial Number (eISSN) , TEXT
+BN, International Standard Book Number (ISBN), TEXT
+J9, 29-Character Source Abbreviation, TEXT
+JI, ISO Source Abbreviation, TEXT
+PD, Publication Date, TEXT
+PY, Year Published, TEXT
+VL, Volume, TEXT
+IS, Issue, IS TEXT
+PN, Part Number, TEXT
+SU, Supplement, TEXT
+SI, Special Issue, TEXT
+MA, Meeting Abstract, TEXT
+BP, Beginning Page, TEXT
+EP, Ending Page, TEXT
+AR, Article Number, TEXT
+DI, Digital Object Identifier (DOI), TEXT
+D2, Book Digital Object Identifier (DOI), TEXT
+EA, Early access date, TEXT
+PG, Page Count, INTEGER
+WC, Web of Science Categories, TEXT
+SC, Research Areas, TEXT
+GA, Document Delivery Number, TEXT
+UT, Accession Number, TEXT
+PM, PubMed ID, TEXT
+OA, Open Access Indicator, TEXT
+HC, ESI Highly Cited Paper, TEXT
+HP, ESI Hot Paper, TEXT
+DA, Date this report was generated, TEXT
