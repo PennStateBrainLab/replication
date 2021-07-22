@@ -24,7 +24,12 @@ def main():
         "../data/processed/web_of_science/all_records.tsv.gz",
     )
 
-    conn = sqlite3.connect(articles_db)
+    conn = sqlite3.connect(articles_db, isolation_level=None)
+    conn.execute('PRAGMA journal_mode = OFF;')
+    conn.execute('PRAGMA synchronous = 0;')
+    conn.execute('PRAGMA cache_size = 1000000;')  # give it a GB
+    conn.execute('PRAGMA locking_mode = EXCLUSIVE;')
+    conn.execute('PRAGMA temp_store = MEMORY;')
     c = conn.cursor()
     c.execute(
         """CREATE TABLE IF NOT EXISTS wosraw (
