@@ -9,6 +9,8 @@ python = "^3.9"
 networkx = "^2.6.1"
 wosfile = "^0.5"
 metaknowledge = "^3.4.1"
+datasette = "^0.58.1"
+sqlite-utils = "^3.12"
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.25.0"
