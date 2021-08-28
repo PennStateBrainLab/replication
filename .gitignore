@@ -4,6 +4,7 @@ keys/*
 # exception to keys - include readme
 !keys/readme.md
 *.retry
+.python-version
 
 personal/
 
