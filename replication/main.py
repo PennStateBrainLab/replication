@@ -195,7 +195,6 @@ def main():
                 try:
                     record_dict[key] = int(rec[key])
                 except ValueError:
-                    pass
                     print(f"{len(rec)}\n {rec=} {rec[key]=}")
         values = [None]
         values.extend([record_dict.get(x, "NULL") for x in wos_columns.keys()])
