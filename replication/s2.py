@@ -12,7 +12,6 @@ articles_db = os.path.join(
 )
 
 conn = sqlite3.connect(articles_db, isolation_level=None)
-
 conn.execute("PRAGMA journal_mode = OFF;")
 conn.execute("PRAGMA synchronous = 0;")
 conn.execute("PRAGMA cache_size = 1000000;")  # give it a GB
@@ -22,7 +21,7 @@ c = conn.cursor()
 c.execute(
     """
     CREATE TABLE IF NOT EXISTS s2raw (
-    id TEXT,
+    id TEXT PRIMARY KEY,
     title TEXT,
     paperAbstract TEXT,
     authors TEXT,
