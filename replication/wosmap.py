@@ -68,6 +68,15 @@ def main():
             if reference in record_ids:
                 reference_doi = reliable_doi(data[record_ids.index(reference)])
                 G.add_edge(paper_node, reference_doi)
+                G.nodes[paper_node].update(
+                    {
+                        "Abstract": str(paper.get("AB")),
+                        "Title": str(paper.get("TI")),
+                        "JournalName": str(paper.get("SO")),
+                        "Keywords": str(paper.get("ID")),
+                        "Year": str(paper.get("PY")),
+                    }
+                )
 
     G.remove_nodes_from(set(G) - nodes_in_data)
     nx.write_pajek(G, output_data)
