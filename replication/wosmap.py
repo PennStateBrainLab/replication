@@ -19,6 +19,7 @@
 
 import pathlib
 import re
+import csv
 
 import networkx as nx
 
@@ -58,28 +59,36 @@ def main():
 
     record_ids = [create_record_id(x) for x in data]
 
+    node_labels = []
+
     for idx, paper in enumerate(data):
         paper_node = reliable_doi(data[idx])
-        # print(f"working on {paper_node=}")
         print(nx.info(G))
         nodes_in_data.add(paper_node)
+        node_labels.append(
+            {
+                "Paper": paper_node,
+                "Abstract": str(paper.get("AB")),
+                "Title": str(paper.get("TI")),
+                "JournalName": str(paper.get("SO")),
+                "Keywords": str(paper.get("ID")),
+                "Year": str(paper.get("PY")),
+            }
+        )
         for reference in paper.get("CR", []):
-            # print(f"working on {reference=}")
             if reference in record_ids:
                 reference_doi = reliable_doi(data[record_ids.index(reference)])
                 G.add_edge(paper_node, reference_doi)
-                G.nodes[paper_node].update(
-                    {
-                        "Abstract": str(paper.get("AB")),
-                        "Title": str(paper.get("TI")),
-                        "JournalName": str(paper.get("SO")),
-                        "Keywords": str(paper.get("ID")),
-                        "Year": str(paper.get("PY")),
-                    }
-                )
-
     G.remove_nodes_from(set(G) - nodes_in_data)
     nx.write_pajek(G, output_data)
+
+    paper_data_columns = ["Paper", "Abstract", "Title", "JournalName", "Keywords", "Year"]
+    output_data_csv = (pathlib.Path(__file__).parent / ".." / "data" / "processed" / "web_of_science").resolve() / "reference.csv"
+    with open(output_data_csv, "w") as output_csv:
+        writer = csv.DictWriter(output_csv, fieldnames=paper_data_columns)
+        writer.writeheader()
+        for row in node_labels:
+            writer.writerow(row)
 
 
 if __name__ == "__main__":
