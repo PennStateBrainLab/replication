@@ -29,18 +29,18 @@ Here is the explantation of folder strucure:
 
 | Column name | Description     |
 |-------------|-----------------|
-| FN          | File Name       |
-| VR          | Version Number  |
-| PT          | Publication Type (J=Journal; B=Book; S=Series; P=Patent) |
-| AU          | Authors         |
-| AF          | Author Full Name |
-| BA          | Book Authors    |
-| BF          | Book Authors Full Name |
-| CA          | Group Authors |
-| GP          | Book Group Authors |
-| BE          | Editors |
-| TI          |  Document Title |
-| SO          | Publication Name |
+| FN | File Name       |
+| VR | Version Number  |
+| PT | Publication Type (J=Journal; B=Book; S=Series; P=Patent) |
+| AU | Authors         |
+| AF | Author Full Name |
+| BA | Book Authors    |
+| BF | Book Authors Full Name |
+| CA | Group Authors |
+| GP | Book Group Authors |
+| BE | Editors |
+| TI | Document Title |
+| SO | Publication Name |
 | SE | Book Series Title |
 | BS | Book Series Subtitle |
 | LA | Language |
