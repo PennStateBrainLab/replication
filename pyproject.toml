@@ -12,6 +12,7 @@ metaknowledge = "^3.4.1"
 datasette = "^0.58.1"
 sqlite-utils = "^3.12"
 pandas = "^1.3.2"
+csvkit = "^1.0.7"
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.25.0"
